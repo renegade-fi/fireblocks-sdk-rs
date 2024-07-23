@@ -40,15 +40,15 @@ sql = ["sqlx"]
 [dependencies]
 serde_json = "1"
 serde = "1.0.195"
-serde_derive = { version = "1"}
+serde_derive = { version = "1" }
 jsonwebtoken = "9"
 reqwest = { version = "0.12", default-features = true, features = ["json"] }
-tokio = { version = "1", default-features = false,  features = ["time"] }
+tokio = { version = "1", default-features = false, features = ["time"] }
 thiserror = "1"
-bigdecimal = { version = "^0.3", features = ["serde"] }
+bigdecimal = { version = "^0.4", features = ["serde"] }
 url = "2"
 chrono = { version = "0.4", default-features = true, features = ["serde"] }
-tracing = {  version = "0.1" }
+tracing = { version = "0.1" }
 tokio-util = { version = "0.7", features = ["rt"] }
 futures = { version = "0.3" }
 sha2 = "0.10"
@@ -61,9 +61,9 @@ openssl = { version = "0.10.55", optional = true } # needed to allow foo to buil
 
 [dev-dependencies]
 tracing-subscriber = { version = "0.3", features = ["env-filter", "serde"] }
-tokio = { version = "1", features = [ "full", "macros", "rt"] }
+tokio = { version = "1", features = ["full", "macros", "rt"] }
 rstest = { version = "0.21" }
 color-eyre = { version = "0.6" }
 lazy_static = "1.4.0"
 dotenvy = { version = "0.15" }
-tokio-stream = {version = "0.1" }
+tokio-stream = { version = "0.1" }
