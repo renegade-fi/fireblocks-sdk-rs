@@ -91,7 +91,7 @@ impl Stream for VaultStream {
         if let Some(result) = opt {
           match result {
             Ok((ref va, ref _id)) => {
-              self.after = Option::clone(&va.paging.after);
+              self.after.clone_from(&va.paging.after);
             },
             Err(e) => {
               return Poll::Ready(Some(Err(e)));

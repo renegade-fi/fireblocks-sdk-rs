@@ -366,6 +366,8 @@ pub struct TransactionArguments {
   pub gas_price: Option<String>,
   #[serde(skip_serializing_if = "Option::is_none")]
   pub gas_limit: Option<String>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  pub extra_parameters: Option<ExtraParameters>,
   pub note: String,
 }
 

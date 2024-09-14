@@ -24,6 +24,7 @@ pub type QueryParams = Vec<(String, String)>;
 macro_rules! impl_base_query_params {
   ($struct_name:ident) => {
     impl $struct_name {
+      #[allow(clippy::missing_const_for_fn)]
       pub fn new() -> Self {
         Self { params: Vec::new(), base: BasePageParams::new() }
       }

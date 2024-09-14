@@ -71,6 +71,7 @@ impl Client {
       gas_price: None,
       gas_limit: None,
       note: note.unwrap_or("created by fireblocks-sdk for rust").to_string(),
+      extra_parameters: None,
     };
     self.create_transaction(args).await
   }
@@ -99,6 +100,7 @@ impl Client {
       gas_price: None,
       gas_limit: None,
       note: note.unwrap_or("created by fireblocks-sdk for rust").to_string(),
+      extra_parameters: None,
     };
     self.create_transaction(args).await
   }
@@ -136,6 +138,7 @@ impl Client {
       gas_price: None,
       gas_limit: None,
       note: note.unwrap_or("created by fireblocks-sdk for rust").to_string(),
+      extra_parameters: None,
     };
     self.create_transaction(args).await
   }
