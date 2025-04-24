@@ -25,9 +25,6 @@ pub struct AssetMetadataBeta {
         skip_serializing_if = "Option::is_none"
     )]
     pub deprecation_referral_id: Option<String>,
-    /// Is asset verified by Fireblocks
-    #[serde(rename = "verified")]
-    pub verified: bool,
     /// Vendor’s website
     #[serde(rename = "website", skip_serializing_if = "Option::is_none")]
     pub website: Option<String>,
@@ -37,12 +34,11 @@ pub struct AssetMetadataBeta {
 }
 
 impl AssetMetadataBeta {
-    pub fn new(scope: Scope, deprecated: bool, verified: bool) -> AssetMetadataBeta {
+    pub fn new(scope: Scope, deprecated: bool) -> AssetMetadataBeta {
         AssetMetadataBeta {
             scope,
             deprecated,
             deprecation_referral_id: None,
-            verified,
             website: None,
             media: None,
         }
@@ -51,9 +47,9 @@ impl AssetMetadataBeta {
 /// The scope of the asset
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Scope {
-    #[serde(rename = "Global")]
+    #[serde(rename = "GLOBAL")]
     Global,
-    #[serde(rename = "Local")]
+    #[serde(rename = "LOCAL")]
     Local,
 }
 

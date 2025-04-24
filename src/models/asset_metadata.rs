@@ -26,9 +26,9 @@ impl AssetMetadata {
 /// The scope of the asset
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Scope {
-    #[serde(rename = "Global")]
+    #[serde(rename = "GLOBAL")]
     Global,
-    #[serde(rename = "Local")]
+    #[serde(rename = "LOCAL")]
     Local,
 }
 
